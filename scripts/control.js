@@ -63,6 +63,11 @@ app.controller('AppCtrl', function($scope) {
         "payload": "dispense"
       };
       conn.message(message);
+      var message = {
+        "devices": "5285ddf7-5250-4f92-ae0a-b783e4fda87b",
+        "payload": "dispense"
+      };
+      conn.message(message);
     };
 
     $scope.testOff = function(){
@@ -201,9 +206,9 @@ angular.module('MyApp').directive('joystick', function() {
             }else if(scope.position.x == -100 && scope.position.y == 100){
               payload = "ccw";
             }else if(scope.position.x == -100 && scope.position.y == -100){
-              payload = "ld";
+              payload = "";
             }else if(scope.position.x == 100 && scope.position.y == -100){
-              payload = "rd";
+              payload = "";
             }else if(scope.position.x > -50 && scope.position.x < 60 && scope.position.y <= -100){
               payload = "up";
             }else if(scope.position.x >= -100 && scope.position.y > -100 && scope.position.x < 0){
